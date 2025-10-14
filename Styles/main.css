@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.navbar-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  border-radius: 0.25rem;
+}
+
+.navbar-nav li a {
+  color: white !important;
+  text-decoration: none;
+  border-radius: 0.25em;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav li a:hover{
+  background-color: #61abff;
+}
+
+#nav-toggle:checked ~ .navbar-nav {
+  max-height: 500px;
+  padding: 0.5rem 0;
+}

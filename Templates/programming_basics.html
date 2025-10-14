@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Styles/main.css">
+    <title>Programming Basics</title>
+</head>
+
+<body class="bg-light">
+    <div id="navbar-placeholder"></div>
+    <div class="mb-4 text-center">
+    <p>Welcome, <span id="userName"></span>!</p>
+    <p>Your mobile number: <span id="userMobile"></span></p>
+    </div>
+    
+    <div class="mb-4">
+        <h3>What is Programming?</h3>
+        <p>
+            Programming is the process of writing instructions for a computer to
+            follow. These instructions, known as code, are written in programming
+            languages like JavaScript, Python, C++, and many more.
+        </p>
+    </div>
+
+    <div class="mb-4">
+        <h4>1. Variables</h4>
+        <p>
+            A variable is a container for storing data values. In most
+            programming languages, you define variables to store things like
+            numbers, text, or objects.
+        </p>
+        <pre><code>let age = 25;
+const name = "Alice";</code></pre>
+    </div>
+
+    <div class="mb-4">
+        <h4>2. Data Types</h4>
+        <p>Common data types include:</p>
+        <ul>
+            <li><strong>String</strong> – Text, e.g., "Hello"</li>
+            <li><strong>Number</strong> – e.g., 123, 3.14</li>
+            <li><strong>Boolean</strong> – true or false</li>
+            <li><strong>Array</strong> – A list of values</li>
+            <li><strong>Object</strong> – A collection of key-value pairs</li>
+        </ul>
+    </div>
+
+    <div class="mb-4">
+        <h4>3. Conditional Statements</h4>
+        <p>
+            Conditional statements let your code make decisions. The most common
+            is <code>if</code>.
+        </p>
+        <pre><code>
+if (age > 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}
+        </code></pre>
+    </div>
+
+    <div class="mb-4">
+        <h4>4. Loops</h4>
+        <p>
+            Loops repeat a block of code multiple times. Here's an example of a
+            <code>for</code> loop:
+        </p>
+        <pre><code>
+for (let i = 0; i < 5; i++) {
+  console.log("Count: " + i);
+}
+        </code></pre>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="nextpage.html" class="btn btn-primary">Continue Learning</a>
+    </div>
+    </div>
+    <script src="../Script/main.js"></script>
+    <script src="../Script/programming-basics.js"></script>
+</body>
+
+</html>
