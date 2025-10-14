@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../Styles/home.css">
-<title>Home</title>
-</head>
-<body>
-<nav class="navbar bg-primary p-3 flex-column align-items-start">
-  <input type="checkbox" id="nav-toggle">
-  <div class="navbar-top w-100">
-    <a class="navbar-brand text-white mb-0" href="#">LearnTech</a>
-    <label for="nav-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-  <ul class="navbar-nav w-100 mt-2">
-    <li><a class="nav-link" href="home.html">Home</a></li>
-    <li><a class="nav-link" href="ai.html">Learn AI</a></li>
-    <li><a class="nav-link" href="cybersecurity.html">Learn cybersecurity</a></li>
-    <li><a class="nav-link" href="making-of.html">Make your page</a></li>
-    <li><a class="nav-link" href="our-story.html">Our story</a></li>
-    <li><a class="nav-link" href="programming_basics.html">Basics of programming</a></li>
-  </ul>
-</nav>
-
-<div class="container mt-5">
-  <p class="h1 text-center text-dark">Welcome to LearnTech</p>
-</div>
-
-<div class="container">
-  <div class="row align-items-center justify-content-center p-2" id="loginMainDiv">
-    <div class="col-sm-8 col-md-6 col-lg-6 rounded p-4 shadow" id="logincol">
-      <div class="row justify-content-center mb-4">
-        <img src="../Images/robot.webp" class="w-25" id="loginIMG">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Styles/home.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar bg-primary p-3 flex-column align-items-start">
+      <input type="checkbox" id="nav-toggle" />
+      <div class="navbar-top w-100">
+        <a class="navbar-brand text-white mb-0" href="#">LearnTech</a>
+        <label for="nav-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
-      <form>
-        <div class="mb-4">
-          <label for="email" class="form-label text-light">Email Address</label>
-          <input type="email" class="form-control" id="email">
-        </div>
-        <div class="mb-4">
-          <label for="password" class="form-label text-light">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-success w-100">Login</button>
-      </form>
-      <p class="mt-4 mb-0 text-center text-light">Not registered yet? <a href="./register.html" class="text-decoration-none">Signup here!</a></p>
+      <ul class="navbar-nav w-100 mt-2">
+        <li><a class="nav-link" href="home.html">Home</a></li>
+        <li><a class="nav-link" href="ai.html">Learn AI</a></li>
+        <li>
+          <a class="nav-link" href="cybersecurity.html">Learn cybersecurity</a>
+        </li>
+        <li><a class="nav-link" href="making-of.html">Make your page</a></li>
+        <li><a class="nav-link" href="our-story.html">Our story</a></li>
+        <li>
+          <a class="nav-link" href="programming_basics.html"
+            >Basics of programming</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+      <p class="h1 text-center text-dark">Welcome to LearnTech</p>
+      <p>
+        LearnTech is a platform created to assist beginners who find it hard to learn how to build a website from scratch. The goal of LearnTech is to provide a strong base in web development by teaching the main concepts step by step. This starts with understanding the basics of HTML and CSS and leads to creating fully functional, responsive websites. The platform emphasizes practical and accessible learning, offering users hands-on experience and real examples to build their skills and confidence in coding.
+      </p>
     </div>
-  </div>
-</div>
-</body>
+
+    <div class="container">
+      <div
+        class="row align-items-center justify-content-center p-2"
+        id="loginMainDiv"
+      >
+        <div
+          class="col-sm-8 col-md-6 col-lg-6 rounded p-4 shadow"
+          id="logincol"
+        >
+          <div class="row justify-content-center mb-4">
+            <img src="../Images/robot.webp" class="w-25" id="loginIMG" />
+          </div>
+          <p class="h2 text-center text-light mb-4">Register your details</p>
+
+          <form>
+            <div class="mb-2">
+              <label for="firstName" class="form-label text-light">First Name</label>
+              <input type="text" id="firstName" class="form-control" required />
+            </div>
+            <div class="mb-2">
+              <label for="lastName" class="form-label text-light">Last Name</label>
+              <input type="text" id="lastName" class="form-control" required />
+            </div>
+            <div class="mb-2">
+              <label for="mobile" class="form-label text-light">Mobile No.</label>
+              <input type="text" id="mobile" class="form-control" required />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="form-label text-light"
+                >Email Address</label
+              >
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <button type="submit" class="btn btn-success w-100">Login</button>
+          </form>
+          <p class="mt-4 mb-0 text-center text-light">
+            Not registered yet?
+            <a href="./register.html" class="text-decoration-none"
+              >Signup here!</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
