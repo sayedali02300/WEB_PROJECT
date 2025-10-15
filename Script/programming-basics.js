@@ -4,7 +4,16 @@ window.addEventListener("load", () => {
   if (data) {
     const { firstName, lastName, mobile } = JSON.parse(data);
 
-    document.getElementById("userName").textContent = `${firstName} ${lastName}`;
-    document.getElementById("userMobile").textContent = mobile;
+    if (
+      firstName.trim() !== "" &&
+      lastName.trim() !== "" &&
+      mobile.trim() !== ""
+    ) {
+      document.getElementById("userName").textContent = `${firstName} ${lastName}`;
+      document.getElementById("userMobile").textContent = mobile;
+      document.getElementById("userInfo").style.display = "block";
+    } else {
+      document.getElementById("userInfo").style.display = "none";
+    }
   }
 });

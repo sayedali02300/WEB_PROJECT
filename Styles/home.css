@@ -7,3 +7,6 @@
 #loginMainDiv{
     min-height: fit-content;
 }
+#robotimg{
+    border-radius: 50%;
+}
