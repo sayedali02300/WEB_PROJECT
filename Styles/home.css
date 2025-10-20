@@ -1,12 +1,18 @@
-#logincol{
-    background-color: rgb(12, 68, 97);
+#logincol {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
 }
-#loginIMG{
-    border-radius: 50%;
+
+#loginIMG,
+#robotimg {
+  border-radius: 50%;
 }
-#loginMainDiv{
-    min-height: fit-content;
+
+#loginMainDiv {
+  min-height: fit-content;
 }
-#robotimg{
-    border-radius: 50%;
+
+#sucessdiv{
+  max-width: fit-content;
+  background-color: var(--color-div-sucess);
 }

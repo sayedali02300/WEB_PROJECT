@@ -1,8 +1,20 @@
-body {
-    background-color: rgb(255, 255, 255);
-    position: relative;
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #0c4461;
+  --color-secondary: #61abff;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-div-sucess: #2196f3;
+  --transition-speed: 0.3s;
+  --border-radius: 0.25rem;
 }
 
+body {
+  background-color: var(--color-bg);
+  position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 #nav-toggle {
   display: none;
 }
@@ -17,9 +29,9 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: var(--color-text-light);
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all var(--transition-speed);
 }
 
 .navbar-top {
@@ -36,22 +48,22 @@ body {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 
 .navbar-nav li a {
-  color: white !important;
+  color: var(--color-text-light) !important;
   text-decoration: none;
-  border-radius: 0.25em;
+  border-radius: var(--border-radius);
   font-weight: 500;
   display: block;
   padding: 0.5rem 0;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-speed);
 }
 
-.navbar-nav li a:hover{
-  background-color: #61abff;
+.navbar-nav li a:hover {
+  background-color: var(--color-secondary);
 }
 
 #nav-toggle:checked ~ .navbar-nav {

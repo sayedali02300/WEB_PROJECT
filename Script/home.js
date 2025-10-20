@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
         <img id="robotimg" src="../Images/robot.webp" class="img-fluid mb-3" style="max-width: 100px;">
       </div>
 
-      <div class="text-center text-light p-3 bg-success rounded">
+      <div id="sucessdiv" class="text-center text-light p-3 rounded d-block my-0 mx-auto">
         <p>You are already registered, ${userData.firstName}!</p>
         <p>Click the toggle to explore our services</p>
       </div>
