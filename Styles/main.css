@@ -1,72 +1,247 @@
+/* ===== THEME TOKENS ===== */
 :root {
-  --color-bg: #ffffff;
-  --color-primary: #0c4461;
-  --color-secondary: #61abff;
-  --color-text-light: #ffffff;
-  --color-text-dark: #000000;
-  --color-div-sucess: #2196f3;
-  --transition-speed: 0.3s;
-  --border-radius: 0.25rem;
+  --page-bg: #0a0d16;
+  --card-bg: #11182b;
+  --card-alt-bg: #1a233d;
+  --border-color: #2c375c;
+
+  --text-main: #ffffff;
+  --text-dim: #8b93b7;
+
+  --accent: #00d26a;
+
+  --radius-lg: 1rem;
 }
 
-body {
-  background-color: var(--color-bg);
-  position: relative;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-#nav-toggle {
-  display: none;
+/* ===== PAGE BASE ===== */
+body.bg-page {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Roboto, Arial, sans-serif;
+  line-height: 1.5;
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
+/* reuse anywhere */
+.text-dim {
+  color: var(--text-dim) !important;
+  font-weight: 400;
+  font-size: .8rem;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--color-text-light);
-  border-radius: 2px;
-  transition: all var(--transition-speed);
+.text-accent {
+  color: var(--accent) !important;
+  font-weight: 600;
 }
 
-.navbar-top {
-  width: 100%;
+/* badge for "PRO", etc */
+.badge-accent {
+  background-color: var(--accent) !important;
+  color: #000 !important;
+  font-size: .6rem;
+  border-radius: .5rem;
+  font-weight: 600;
+}
+
+/* ===== NAVBAR OVERRIDE (still Bootstrap .navbar) ===== */
+.navbar.bg-dark {
+  background-color: #0f172a !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+.navbar .nav-link {
+  color: var(--text-dim) !important;
+  font-weight: 500;
+  font-size: .95rem;
+  transition: color .15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--accent) !important;
+}
+
+/* ===== DARK CARD LOOK on top of .card ===== */
+.card-dark {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.6);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+.card-dark .card-header {
+  background-color: var(--card-alt-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-main);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: .9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar-nav {
-  width: 100%;
-  flex-direction: column;
-  gap: 10px;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  border-radius: var(--border-radius);
+.card-dark .card-body {
+  color: var(--text-main);
+  font-size: .95rem;
 }
 
-.navbar-nav li a {
-  color: var(--color-text-light) !important;
+/* small gray meta text inside cards */
+.meta-text {
+  color: var(--text-dim);
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+/* ===== FEATURE HERO (custom block, Bootstrap doesn't have this) ===== */
+
+.feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.6) 50%,
+    rgba(0,0,0,.9) 80%
+  );
+}
+.feature-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  z-index: 2;
+}
+.feature-headline {
+  font-size: clamp(1.1rem, .4vw + 1rem, 1.3rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: .5rem;
+}
+
+/* lil pill in hero ("Man of the Match") */
+.stat-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-size: .75rem;
+  line-height: 1.2;
+  background-color: rgba(0,0,0,.4);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+}
+
+/* ===== ARTICLE MINI ROWS ===== */
+.article-mini {
+  display: flex;
+  gap: .75rem;
   text-decoration: none;
-  border-radius: var(--border-radius);
+  color: var(--text-main);
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.article-mini:last-child {
+  border-bottom: 0;
+}
+.article-mini:hover {
+  background-color: rgba(255,255,255,0.02);
+}
+.article-thumb {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  border-radius: .5rem;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-color);
+}
+.article-headline {
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.article-meta {
+  font-size: .7rem;
+  color: var(--text-dim);
+  margin-top: .25rem;
+}
+
+/* ===== LIVE SCORES LIST ===== */
+/* we piggyback on .list-group but dark */
+.list-group-dark .list-group-item {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
+  font-size: .9rem;
   font-weight: 500;
+}
+.score-league {
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+/* ===== LOGIN CARD OVERRIDES (just reuse .card-dark) ===== */
+#formMessage {
+  background-color: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.3);
+  color: #ff6b6b;
+  border-radius: .5rem;
+  font-size: .8rem;
+}
+
+/* accent button */
+.btn-accent {
+  background-color: var(--accent) !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  border: 0 !important;
+}
+.btn-accent:hover {
+  background-color: #00ff85 !important;
+  color: #000 !important;
+}
+
+/* ===== ARTICLE PAGE TITLES ===== */
+.article-header-title {
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.8rem);
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: .5rem;
+}
+.article-meta-line {
+  color: var(--text-dim);
+  font-size: .8rem;
+}
+
+/* code blocks (optional, if you keep basics/programming page) */
+pre code {
   display: block;
-  padding: 0.5rem 0;
-  text-align: center;
-  transition: background-color var(--transition-speed);
+  background-color: var(--card-alt-bg);
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+  color: var(--text-main);
+  font-size: .8rem;
+  padding: .75rem 1rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.75);
 }
 
-.navbar-nav li a:hover {
-  background-color: var(--color-secondary);
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: #0f172a;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-dim);
+  font-size: .8rem;
 }
-
-#nav-toggle:checked ~ .navbar-nav {
-  max-height: 500px;
-  padding: 0.5rem 0;
+.site-footer a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-footer a:hover {
+  color: var(--accent);
 }

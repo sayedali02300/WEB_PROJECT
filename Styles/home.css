@@ -1,18 +1,56 @@
-#logincol {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
+/* home.css */
+
+/* spacing tweaks for sections */
+.section-block {
+  margin-top: 2rem;
 }
 
-#loginIMG,
-#robotimg {
-  border-radius: 50%;
+.feature-hero {
+  background-image: url('/Images/LaLiga-BG.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
 }
 
-#loginMainDiv {
-  min-height: fit-content;
+/* dark overlay */
+.feature-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* darker overlay, adjust 0.6 → 0.7 if needed */
 }
 
-#sucessdiv{
-  max-width: fit-content;
-  background-color: var(--color-div-sucess);
+.feature-headline {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+/* player stat / quick pill */
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background-color: rgba(0,0,0,.4);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: .3rem .6rem;
+  margin-top: .5rem;
+}
+
+/* welcome box after login */
+#welcomeCard .welcome-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+}
+#welcomeCard .welcome-mobile {
+  color: var(--text-dim);
+  font-size: .8rem;
 }

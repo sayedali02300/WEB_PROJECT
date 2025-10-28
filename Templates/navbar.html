@@ -1,19 +1,65 @@
-<nav class="navbar bg-primary p-3 flex-column mb-5 align-items-start">
-  <input type="checkbox" id="nav-toggle" />
-  <div class="navbar-top w-100">
-    <a class="navbar-brand text-white mb-0" href="home.html">LearnTech</a>
-    <label for="nav-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+<!-- navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary py-2">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold text-accent" href="home.html">
+      <span class="text-danger">LaLega</span>
+      <span class="text-secondary small">/ football news</span>
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="headlines.html">
+            Headlines
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="matches.html">
+            Matches & Scores
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <!-- this reuses your old programming_basics.html, now it's an article page -->
+          <a class="nav-link" href="programming_basics.html">
+            Match Analysis
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <!-- you had our-story.html public before, we keep something like that public -->
+          <a class="nav-link" href="our-story.html">
+            About LaLega
+          </a>
+        </li>
+
+        <!-- locked pages example -->
+        <li class="nav-item">
+          <a class="nav-link" href="premium-insights.html">
+            Premium
+            <span class="badge bg-accent text-dark ms-1">PRO</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <ul class="navbar-nav w-100 mt-2">
-    <li><a class="nav-link" href="home.html">Home</a></li>
-    <li><a class="nav-link" href="ai.html">Learn AI</a></li>
-    <li><a class="nav-link" href="cybersecurity.html">Learn cybersecurity</a></li>
-    <li><a class="nav-link" href="making-of.html">Make your page</a></li>
-    <li><a class="nav-link" href="our-story.html">Our story</a></li>
-    <li><a class="nav-link" href="programming_basics.html">Basics of programming</a></li>
-  </ul>
 </nav>

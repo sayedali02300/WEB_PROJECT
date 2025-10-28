@@ -1,3 +1,4 @@
+// programming-basics.js
 window.addEventListener("load", () => {
   const data = sessionStorage.getItem("formData");
 

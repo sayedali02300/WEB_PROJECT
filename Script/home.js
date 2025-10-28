@@ -1,9 +1,10 @@
+// home.js
 window.addEventListener("load", () => {
   const form = document.querySelector("form");
   const errorDiv = document.getElementById("formMessage");
-  errorDiv.textContent = "";
-  const logged = document.getElementById("firstlogindiv");
+  const parentBox = document.getElementById("firstlogindiv");
 
+  // check if already logged
   const storedData = sessionStorage.getItem("formData");
   const userData = storedData ? JSON.parse(storedData) : {};
 
@@ -13,83 +14,71 @@ window.addEventListener("load", () => {
     userData.mobile?.trim();
 
   if (isRegistered) {
-    logged.innerHTML = `
-      <div class="text-center mt-3">
-        <img id="robotimg" src="../Images/robot.webp" class="img-fluid mb-3" style="max-width: 100px;">
-      </div>
-
-      <div id="sucessdiv" class="text-center text-light p-3 rounded d-block my-0 mx-auto">
-        <p>You are already registered, ${userData.firstName}!</p>
-        <p>Click the toggle to explore our services</p>
-      </div>
-
-      <div class="card bg-light text-dark p-3 mb-4 mt-4 mx-auto" style="max-width: 600px;">
-        <h5>Tip of the day</h5>
-        <p>Remember to practice HTML and CSS every day. Small steps build big skills!</p>
-      </div>
-
-      <div class="text-center">
-        <button id="newAccountBtn" class="btn btn-warning mb-4">Register with another account?</button>
-      </div>
-    `;
-
-    setTimeout(() => {
-      const btn = document.getElementById("newAccountBtn");
-      if (btn) {
-        btn.addEventListener("click", () => {
-          sessionStorage.removeItem("formData");
-          const first = document.getElementById("firstName");
-          const last = document.getElementById("lastName");
-          const mobile = document.getElementById("mobile");
-          if (first) first.value = "";
-          if (last) last.value = "";
-          if (mobile) mobile.value = "";
-          window.location.reload();
-        });
-      }
-    }, 0);
-
+    parentBox.innerHTML = makeWelcomeCard(userData.firstName, userData.lastName, userData.mobile);
     return;
-}
+  }
 
+  // if not logged yet:
+  if (!form) return;
 
+  errorDiv.style.display = "none";
+  errorDiv.textContent = "";
 
-  errorDiv.classList.remove("bg-success", "bg-danger", "p-3");
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", e => {
     e.preventDefault();
+    const firstName = document.getElementById("firstName")?.value?.trim() ?? "";
+    const lastName = document.getElementById("lastName")?.value?.trim() ?? "";
+    const mobile = document.getElementById("mobile")?.value?.trim() ?? "";
 
-    errorDiv.textContent = "";
-    errorDiv.classList.remove("bg-success");
-    errorDiv.classList.add("bg-danger");
-
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
-
-    function isDigits(str) {
-      return [...str].every((ch) => ch >= "0" && ch <= "9");
-    }
     const Errors = [];
 
-    if (firstName.length < 3 || lastName.length < 3) {
-      Errors.push(
-        "First and last names must each be at least three characters long"
-      );
+    if (firstName === "") {
+      Errors.push("First name is required.");
     }
-    if (mobile.length !== 8 || !isDigits(mobile)) {
-      Errors.push("Mobile No. must be numbers and contain exactly 8 digits");
+    if (lastName === "") {
+      Errors.push("Last name is required.");
+    }
+    if (mobile === "") {
+      Errors.push("Mobile number is required.");
+    } else if (!/^\+?\d{6,15}$/.test(mobile)) {
+      Errors.push("Mobile looks invalid.");
     }
 
     if (Errors.length > 0) {
-      errorDiv.innerHTML = Errors.join("<br><br>");
-      errorDiv.classList.remove("p-2");
-      errorDiv.classList.add("p-3");
+      errorDiv.innerHTML = Errors.join("<br>");
+      errorDiv.style.display = "block";
     } else {
       sessionStorage.setItem(
         "formData",
         JSON.stringify({ firstName, lastName, mobile })
       );
+      // reload so navbar + other pages know you're 'logged'
       window.location.reload();
     }
   });
+
+  function makeWelcomeCard(fn, ln, mobile) {
+    return `
+      <div id="welcomeCard" class="p-3">
+        <div class="d-flex flex-column">
+          <div class="text-accent fw-semibold text-uppercase small mb-2">You're in</div>
+          <div class="welcome-name mb-1">${fn} ${ln}</div>
+          <div class="welcome-mobile">Mobile: ${mobile}</div>
+        </div>
+
+        <hr class="border-secondary my-3" />
+
+        <div class="meta-text mb-2">Unlocked:</div>
+        <ul class="list-unstyled small mb-3">
+          <li>• Match Analysis (tactics)</li>
+          <li>• Premium transfer rumors</li>
+          <li>• Full table & form guide</li>
+        </ul>
+
+        <a class="btn btn-accent w-100 fw-semibold" href="programming_basics.html">
+          Go to Match Analysis
+        </a>
+      </div>
+    `;
+  }
 });

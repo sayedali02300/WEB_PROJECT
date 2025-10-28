@@ -1,58 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../Styles/main.css" />
-    <link rel="stylesheet" href="../Styles/home.css" />
-    <title>Home</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <div class="container mt-5">
-      <p class="h1 text-center text-dark">Welcome to LearnTech</p>
-      <p>
-        LearnTech is a platform created to assist beginners who find it hard to learn how to build a website from scratch. The goal of LearnTech is to provide a strong base in web development by teaching the main concepts step by step. This starts with understanding the basics of HTML and CSS and leads to creating fully functional, responsive websites. The platform emphasizes practical and accessible learning, offering users hands-on experience and real examples to build their skills and confidence in coding.
-      </p>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <div class="container" id="firstlogindiv">
-      <div
-        class="row align-items-center justify-content-center p-2"
-        id="loginMainDiv"
-      >
-        <div
-          class="col-sm-8 col-md-6 col-lg-6 rounded p-4 shadow"
-          id="logincol"
-        >
-          <div class="row justify-content-center mb-4">
-            <img src="../Images/robot.webp" class="w-25" id="loginIMG" />
+  <link rel="stylesheet" href="../styles/main.css"/>
+  <link rel="stylesheet" href="../styles/home.css"/>
+
+  <title>LaLega | Home</title>
+</head>
+<body class="bg-page text-white">
+  <div id="navbar-placeholder"></div>
+  <main class="container py-4">
+
+    <div class="row g-4">
+      <div class="col-lg-8 d-flex flex-column gap-4">
+        <section class="feature-hero">
+          <div class="feature-overlay"></div>
+          <div class="feature-content">
+            <h2 class="feature-headline fw-bold mt-5">A dramatic 90th minute winner seals the capital derby</h2>
+            <div class="stat-pill">
+              <span class="fw-semibold">Man of the Match:</span>
+              <span>#10 L. Yamal</span>
+              <span class="text-accent fw-bold">2 G / 1 AST</span>
+            </div>
           </div>
-          <p class="h2 text-center text-light mb-4">Register your details</p>
-          <div id="formMessage" class="mb-3 bg-danger text-light text-center rounded"></div>
-          <form>
-            <div class="mb-2">
-              <label for="firstName" class="form-label text-light">First Name</label>
-              <input type="text" id="firstName" class="form-control" required />
-            </div>
-            <div class="mb-2">
-              <label for="lastName" class="form-label text-light">Last Name</label>
-              <input type="text" id="lastName" class="form-control" required />
-            </div>
-            <div class="mb-4">
-              <label for="mobile" class="form-label text-light">Mobile No.</label>
-              <input type="text" id="mobile" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-success w-100">Login</button>
-          </form>
-        </div>
+        </section>
+
+        <!-- TOP STORIES CARD -->
+        <section class="card card-dark">
+          <div class="card-header">
+            <span class="fw-semibold text-white">Top Stories</span>
+            <span class="meta-text">Updated 20 minutes ago</span>
+          </div>
+
+          <div class="card-body p-0">
+            <a href="programming_basics.html" class="article-mini">
+              <div class="article-thumb">
+                
+              </div>              </div>
+              <div class="flex-grow-1">
+                <div class="article-headline">
+                  How high press from LaLega teams is killing slow build-up this season
+                </div>
+                <div class="article-meta">
+                  Tactical Breakdown • 6 min read
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="article-mini">
+              <div class="article-thumb"
+                style="background-image:url('https://placehold.co/200x200/1a233d/ffffff?text=Wonderkid');">
+              </div>
+              <div class="flex-grow-1">
+                <div class="article-headline">
+                  18 y/o striker breaks academy record with 11 goals in 8 games
+                </div>
+                <div class="article-meta">
+                  Rising Talent • 3 hours ago
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="article-mini">
+              <div class="article-thumb"
+                style="background-image:url('https://placehold.co/200x200/11182b/ffffff?text=Injury');">
+              </div>
+              <div class="flex-grow-1">
+                <div class="article-headline">
+                  Star midfielder out 6 weeks — coach says “we adapt or we’re done”
+                </div>
+                <div class="article-meta">
+                  Breaking News • 28 min ago
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- SIDE COLUMN -->
+      <div class="col-lg-4 d-flex flex-column gap-4">
+
+        <!-- LIVE SCORES CARD -->
+        <section class="card card-dark">
+          <div class="card-header">
+            <span class="fw-semibold text-white">Live Scores</span>
+            <span class="meta-text">LaLega / Cup</span>
+          </div>
+
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush list-group-dark">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div>Capital FC <span class="text-accent">2</span></div>
+                  <div class="text-dim">
+                    vs North City <span class="text-accent">1</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="score-league">90'+4</div>
+                  <div class="text-dim">LIVE</div>
+                </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div>Marina Club <span class="text-accent">1</span></div>
+                  <div class="text-dim">
+                    vs Steel Union <span class="text-accent">1</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="score-league">HT</div>
+                  <div class="text-dim">League</div>
+                </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div>Old Town <span class="text-accent">0</span></div>
+                  <div class="text-dim">
+                    vs Royal East <span class="text-accent">0</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="score-league">19'</div>
+                  <div class="text-dim">Cup</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- LOGIN / SIGNUP CARD -->
+        <section id="firstlogindiv">
+          <div id="loginCard" class="card card-dark p-3">
+            <h5 class="mb-3 fw-semibold text-accent">Get full access</h5>
+            <p class="meta-text mb-3">
+              Log in to unlock Premium, Match Analysis, player stats and more.
+            </p>
+
+            <div id="formMessage" class="mb-3 p-2" style="display:none;"></div>
+
+            <form>
+              <div class="mb-3">
+                <label for="firstName" class="form-label text-white-50 small">First name</label>
+                <input
+                  class="form-control bg-dark text-white border-secondary"
+                  id="firstName"
+                  type="text"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="lastName" class="form-label text-white-50 small">Last name</label>
+                <input
+                  class="form-control bg-dark text-white border-secondary"
+                  id="lastName"
+                  type="text"
+                  required
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="mobile" class="form-label text-white-50 small">Mobile number</label>
+                <input
+                  class="form-control bg-dark text-white border-secondary"
+                  id="mobile"
+                  type="text"
+                  required
+                />
+              </div>
+
+              <button class="btn btn-accent w-100" type="submit">
+                Enter LaLega
+              </button>
+            </form>
+          </div>
+        </section>
+
       </div>
     </div>
-    <script src="../Script/main.js"></script>
-    <script src="../Script/home.js"></script>
-  </body>
+
+    <!-- STANDINGS + TRANSFERS -->
+    <section class="mt-4">
+      <div class="row g-4">
+        <!-- TABLE SNAPSHOT -->
+        <div class="col-lg-8">
+          <div class="card card-dark">
+            <div class="card-header">
+              <span class="text-white fw-semibold">Table Snapshot</span>
+              <span class="meta-text">Top 5 • after Matchday 10</span>
+            </div>
+
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-dark table-striped table-borderless align-middle mb-0"
+                  style="--bs-table-bg:transparent;">
+                  <thead class="small text-uppercase text-secondary">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Club</th>
+                      <th scope="col">Pts</th>
+                      <th scope="col">GF</th>
+                      <th scope="col">GA</th>
+                      <th scope="col">Form</th>
+                    </tr>
+                  </thead>
+                  <tbody class="small">
+                    <tr>
+                      <th>1</th>
+                      <td>Capital FC</td>
+                      <td class="text-accent fw-bold">25</td>
+                      <td>21</td>
+                      <td>7</td>
+                      <td><span class="text-accent">W</span> W D W W</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Royal East</td>
+                      <td class="text-accent fw-bold">24</td>
+                      <td>19</td>
+                      <td>8</td>
+                      <td>W W W L W</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Steel Union</td>
+                      <td class="text-accent fw-bold">22</td>
+                      <td>14</td>
+                      <td>6</td>
+                      <td>D W W W D</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Marina Club</td>
+                      <td class="text-accent fw-bold">18</td>
+                      <td>15</td>
+                      <td>12</td>
+                      <td>D D W L W</td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>North City</td>
+                      <td class="text-accent fw-bold">16</td>
+                      <td>13</td>
+                      <td>10</td>
+                      <td>L W D W L</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="meta-text mt-2">
+                Full standings coming soon →
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANSFER TALK -->
+        <div class="col-lg-4">
+          <div class="card card-dark h-100">
+            <div class="card-header">
+              <span class="text-white fw-semibold">Transfer Talk</span>
+              <span class="meta-text">Rumors Heat</span>
+            </div>
+
+            <div class="card-body">
+              <div class="article-headline mb-1">
+                Marina Club targeting 40M€ winger in January
+              </div>
+              <div class="article-meta mb-3">
+                Sources say personal terms already discussed
+              </div>
+
+              <div class="article-headline mb-1">
+                Keeper swap deal on the table between Royal East and North City
+              </div>
+              <div class="article-meta">
+                Both #1s unhappy with current minutes
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer mt-5 py-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <div class="fw-semibold text-white mb-2">LaLega</div>
+          <div class="text-dim">
+            Daily football news, instant live scores, tactical breakdowns.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="fw-semibold text-white mb-2">Stay Updated</div>
+          <div class="text-dim mb-2">Get match alerts &amp; headline summaries.</div>
+          <button class="btn btn-accent btn-sm px-3">Notify me</button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="fw-semibold text-white mb-2">Links</div>
+          <div><a href="our-story.html">About</a></div>
+          <div><a href="premium-insights.html">Premium</a></div>
+          <div><a href="headlines.html">Headlines</a></div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 text-dim">
+        © 2025 LaLega.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- your scripts -->
+  <script src="../Script/main.js"></script>
+  <script src="../Script/home.js"></script>
+</body>
 </html>
