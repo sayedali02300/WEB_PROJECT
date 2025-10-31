@@ -75,7 +75,7 @@ window.addEventListener("load", () => {
           <li>• Full table & form guide</li>
         </ul>
 
-        <a class="btn btn-accent w-100 fw-semibold" href="programming_basics.html">
+        <a class="login btn btn-success w-100 fw-semibold" href="programming_basics.html">
           Go to Match Analysis
         </a>
       </div>

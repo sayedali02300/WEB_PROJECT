@@ -43,6 +43,16 @@ body.bg-page {
 }
 
 /* ===== NAVBAR OVERRIDE (still Bootstrap .navbar) ===== */
+.navbar .navbar-toggler{
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: 0.3s background-color;
+}
+
+.navbar .navbar-toggler:hover{
+  background-color: rgb(22, 36, 70);
+}
 .navbar.bg-dark {
   background-color: #0f172a !important;
   box-shadow: 0 2px 12px rgba(0,0,0,0.8);
@@ -192,9 +202,9 @@ body.bg-page {
   border-radius: .5rem;
   font-size: .8rem;
 }
-
-/* accent button */
-
+.login{
+  transition: 0.3s background-color;
+}
 /* ===== ARTICLE PAGE TITLES ===== */
 .article-header-title {
   font-size: clamp(1.4rem, 1vw + 1rem, 1.8rem);
