@@ -139,14 +139,15 @@ body.bg-page {
   gap: .75rem;
   text-decoration: none;
   color: var(--text-main);
-  padding: .75rem 0;
+  padding: 2%;
   border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s;
 }
 .article-mini:last-child {
   border-bottom: 0;
 }
 .article-mini:hover {
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgba(188, 188, 188, 0.126);
 }
 .article-thumb {
   flex: 0 0 72px;
@@ -193,16 +194,6 @@ body.bg-page {
 }
 
 /* accent button */
-.btn-accent {
-  background-color: var(--accent) !important;
-  color: #000 !important;
-  font-weight: 600 !important;
-  border: 0 !important;
-}
-.btn-accent:hover {
-  background-color: #00ff85 !important;
-  color: #000 !important;
-}
 
 /* ===== ARTICLE PAGE TITLES ===== */
 .article-header-title {

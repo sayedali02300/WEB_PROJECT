@@ -37,94 +37,92 @@
 
           <div class="card-body p-0">
             <a href="programming_basics.html" class="article-mini">
-              <div class="article-thumb">
+              <div class="article-thumb" id="first">
                 
-              </div>              </div>
+              </div>
               <div class="flex-grow-1">
                 <div class="article-headline">
                   How high press from LaLega teams is killing slow build-up this season
                 </div>
                 <div class="article-meta">
-                  Tactical Breakdown • 6 min read
+                  Tactical Breakdown - 5 min read
                 </div>
               </div>
             </a>
 
             <a href="#" class="article-mini">
-              <div class="article-thumb"
-                style="background-image:url('https://placehold.co/200x200/1a233d/ffffff?text=Wonderkid');">
+              <div class="article-thumb" id="second">
+
               </div>
               <div class="flex-grow-1">
                 <div class="article-headline">
-                  18 y/o striker breaks academy record with 11 goals in 8 games
+                  Kylian Mbappé breaks the record with 11 goals in 8 games
                 </div>
                 <div class="article-meta">
-                  Rising Talent • 3 hours ago
+                  new score - 3 hours ago
                 </div>
               </div>
             </a>
 
             <a href="#" class="article-mini">
-              <div class="article-thumb"
-                style="background-image:url('https://placehold.co/200x200/11182b/ffffff?text=Injury');">
+              <div class="article-thumb" id="third">
               </div>
               <div class="flex-grow-1">
                 <div class="article-headline">
-                  Star midfielder out 6 weeks — coach says “we adapt or we’re done”
+                  FCB coach says "we adapt or we're done"
                 </div>
                 <div class="article-meta">
-                  Breaking News • 28 min ago
+                  Breaking News - 28 min ago
                 </div>
               </div>
             </a>
           </div>
         </section>
-
       </div>
 
-      <!-- SIDE COLUMN -->
+      <!-- Live Scores DIV -->
       <div class="col-lg-4 d-flex flex-column gap-4">
 
         <!-- LIVE SCORES CARD -->
         <section class="card card-dark">
           <div class="card-header">
-            <span class="fw-semibold text-white">Live Scores</span>
-            <span class="meta-text">LaLega / Cup</span>
+            <span class="fw-semibold text-white"><span class="text-danger">Live</span> Scores</span>
+            <span class="text-secondary small">LaLega / Copa del Rey</span>
           </div>
 
           <div class="card-body p-0">
             <ul class="list-group list-group-flush list-group-dark">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                  <div>Capital FC <span class="text-accent">2</span></div>
+                  <div>Atlético de Madrid <span class="text-accent">2</span></div>
                   <div class="text-dim">
-                    vs North City <span class="text-accent">1</span>
+                    vs Real Betis <span class="text-accent">0</span>
                   </div>
                 </div>
                 <div class="text-end">
-                  <div class="score-league">90'+4</div>
+                  <div class="score-league">90+2</div>
                   <div class="text-dim">LIVE</div>
                 </div>
               </li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                  <div>Marina Club <span class="text-accent">1</span></div>
+                  <div>Real Madrid <span class="text-accent">2</span></div>
                   <div class="text-dim">
-                    vs Steel Union <span class="text-accent">1</span>
+                    vs FC Barcelona <span class="text-accent">1</span>
                   </div>
                 </div>
                 <div class="text-end">
-                  <div class="score-league">HT</div>
+                  <div class="score-league">FT</div>
                   <div class="text-dim">League</div>
                 </div>
               </li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                  <div>Old Town <span class="text-accent">0</span></div>
+                  <div>Sevilla FC <span class="text-accent">0</span></div>
                   <div class="text-dim">
-                    vs Royal East <span class="text-accent">0</span>
+                    vs Toledo <span class="text-accent">0</span>
                   </div>
                 </div>
                 <div class="text-end">
@@ -136,7 +134,7 @@
           </div>
         </section>
 
-        <!-- LOGIN / SIGNUP CARD -->
+        <!-- LOGIN -->
         <section id="firstlogindiv">
           <div id="loginCard" class="card card-dark p-3">
             <h5 class="mb-3 fw-semibold text-accent">Get full access</h5>
@@ -190,13 +188,14 @@
     <!-- STANDINGS + TRANSFERS -->
     <section class="mt-4">
       <div class="row g-4">
-        <!-- TABLE SNAPSHOT -->
         <div class="col-lg-8">
-          <div class="card card-dark">
-            <div class="card-header">
-              <span class="text-white fw-semibold">Table Snapshot</span>
-              <span class="meta-text">Top 5 • after Matchday 10</span>
-            </div>
+        <div class="card card-dark">
+        <div class="card-header p-0">
+        <a href="./table.html" class="header-link d-flex justify-content-between align-items-center w-100 p-3 text-decoration-none">
+        <span class="fw-semibold text-light">Table</span>
+       <span class="meta-text">></span>
+        </a>
+        </div>
 
             <div class="card-body">
               <div class="table-responsive">
@@ -256,10 +255,6 @@
                   </tbody>
                 </table>
               </div>
-
-              <div class="meta-text mt-2">
-                Full standings coming soon →
-              </div>
             </div>
           </div>
         </div>
@@ -309,7 +304,7 @@
         <div class="col-md-4">
           <div class="fw-semibold text-white mb-2">Stay Updated</div>
           <div class="text-dim mb-2">Get match alerts &amp; headline summaries.</div>
-          <button class="btn btn-accent btn-sm px-3">Notify me</button>
+<button class="btn btn-success btn-sm px-3">Notify me</button>
         </div>
 
         <div class="col-md-4">

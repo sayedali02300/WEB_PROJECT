@@ -28,7 +28,21 @@
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-
+#first{
+  background-image: url(/Images/tactics.png);
+}
+#second{
+  background-image: url(/Images/striker.png);
+}
+#third{
+  background-image: url(/Images/FCB_C.avif);
+}
+.header-link {
+  transition: background-color 0.3s;
+}
+.header-link:hover {
+  background-color: color-mix( in srgb, var(--bs-card-cap-bg, #f8f9fa) 85%, white);
+}
 /* player stat / quick pill */
 .stat-pill {
   display: inline-flex;
